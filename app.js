@@ -11,7 +11,6 @@ L’output del prezzo finale va stampato in console in forma “umana” cioè c
 // VARIABILI PROMPT
 let richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere con i nostri treni."; //string
 let richiestaAnni = "Inserisca la sua età."; //string
-let dichiarazionePrezzo = "Il prezzo del suo biglietto è di " + prezzoFinale + ".";
 
 //VARIABILI UTENTE DA PROMPT
 let chilometriUtente = parseFloat(prompt(richiestaKm)); //number
@@ -34,7 +33,9 @@ if(anniUtente < 18){
   sconto = (prezzoIntero / 100) * scontoMaggiorenni;
 }
 
-//CALCOLO PREZZO FINALE E COUNICAZIONE PROMPT
+//CALCOLO PREZZO FINALE
 let prezzoFinale = prezzoIntero - parseFloat(sconto);
 
+// VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
+let dichiarazionePrezzo = "Il prezzo del suo biglietto è di " + prezzoFinale + ".";
 console.log(dichiarazionePrezzo);
