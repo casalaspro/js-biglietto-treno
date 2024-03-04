@@ -11,3 +11,7 @@ let richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere c
 let richiestaAnni = "Inserisca la sua età."; //string
 let chilometriUtente = parseFloat(prompt(richiestaKm)); //number
 let anniUtente =  parseFloat(prompt(richiestaAnni)); //number
+let costoKm = 0.21; //float
+let scontoMinorenni = 20;
+let scontoMaggiorenni = 0;
+let scontoOver65 = 40;
