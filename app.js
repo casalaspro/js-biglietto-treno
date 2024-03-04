@@ -12,6 +12,19 @@ let richiestaAnni = "Inserisca la sua età."; //string
 let chilometriUtente = parseFloat(prompt(richiestaKm)); //number
 let anniUtente =  parseFloat(prompt(richiestaAnni)); //number
 let costoKm = 0.21; //float
-let scontoMinorenni = 20;
-let scontoMaggiorenni = 0;
-let scontoOver65 = 40;
+let scontoMinorenni = 20; //number
+let scontoMaggiorenni = 0;  //number
+let scontoOver65 = 40;  //number
+let sconto;
+let prezzoIntero = chilometriUtente * costoKm;
+
+if(anniUtente < 18){
+  sconto = (prezzoIntero / 100) * scontoMinorenni;
+}else if(anniUtente >= 65){
+  sconto = (prezzoIntero / 100) * scontoOver65;
+}else{
+  sconto = (prezzoIntero / 100) * scontoMaggiorenni;
+}
+
+let prezzoFinale = prezzoIntero - parseFloat(sconto);
+
