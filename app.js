@@ -37,5 +37,5 @@ if(anniUtente < 18){
 let prezzoFinale = prezzoIntero - sconto; //float
 
 // VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
-let dichiarazionePrezzo = "Il prezzo del suo biglietto è di " + prezzoFinale.toFixed(2) + ".";
+let dichiarazionePrezzo = "Il prezzo del suo biglietto è di € " + prezzoFinale.toFixed(2) + ".";
 console.log(dichiarazionePrezzo);
