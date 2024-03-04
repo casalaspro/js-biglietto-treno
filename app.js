@@ -9,33 +9,33 @@ L’output del prezzo finale va stampato in console in forma “umana” cioè c
 
 
 // VARIABILI PROMPT
-let richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere con i nostri treni."; //string
-let richiestaAnni = "Inserisca la sua età."; //string
+const richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere con i nostri treni."; //string
+const richiestaAnni = "Inserisca la sua età."; //string
 
 //VARIABILI UTENTE DA PROMPT
-let chilometriUtente = parseFloat(prompt(richiestaKm)); //number
-let anniUtente =  parseFloat(prompt(richiestaAnni)); //number
+const chilometriUtente = parseInt(prompt(richiestaKm)); //number
+const anniUtente =  parseInt(prompt(richiestaAnni)); //number
 
 //PREZZI E SCONTISTICA
-let costoKm = 0.21; //float
-let scontoMinorenni = 20; //number
-let scontoMaggiorenni = 0;  //number
-let scontoOver65 = 40;  //number
+const costoKm = 0.21; //float
+const scontoMinorenni = 20; //number
+const scontoMaggiorenni = 0;  //number
+const scontoOver65 = 40;  //number
 let sconto;
 let prezzoIntero = chilometriUtente * costoKm;
 
 //CALCOLO SCONTO
 if(anniUtente < 18){
-  sconto = (prezzoIntero / 100) * scontoMinorenni;
+  sconto = (prezzoIntero / 100) * scontoMinorenni; //float
 }else if(anniUtente >= 65){
-  sconto = (prezzoIntero / 100) * scontoOver65;
+  sconto = (prezzoIntero / 100) * scontoOver65; //float
 }else{
-  sconto = (prezzoIntero / 100) * scontoMaggiorenni;
+  sconto = (prezzoIntero / 100) * scontoMaggiorenni; //float
 }
 
 //CALCOLO PREZZO FINALE
-let prezzoFinale = prezzoIntero - parseFloat(sconto);
+let prezzoFinale = prezzoIntero - sconto; //float
 
 // VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
-let dichiarazionePrezzo = "Il prezzo del suo biglietto è di " + prezzoFinale + ".";
+let dichiarazionePrezzo = "Il prezzo del suo biglietto è di " + prezzoFinale.toFixed(2) + ".";
 console.log(dichiarazionePrezzo);
