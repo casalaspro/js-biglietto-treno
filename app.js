@@ -39,3 +39,5 @@ let prezzoFinale = prezzoIntero - sconto; //float
 // VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
 let dichiarazionePrezzo = "Il prezzo del suo biglietto è di € " + prezzoFinale.toFixed(2) + ".";
 console.log(dichiarazionePrezzo);
+
+// con math.round(prezzoFinale*100)/100 bisogna usare il metodo di moltiplicare per 10 con tanti zeri quanti decimali vogliamo avere, fare arrotondare e poi dividere nuovamente.
