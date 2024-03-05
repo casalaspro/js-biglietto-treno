@@ -41,3 +41,7 @@ let dichiarazionePrezzo = "Il prezzo del suo biglietto è di € " + prezzoFinal
 console.log(dichiarazionePrezzo);
 
 // con math.round(prezzoFinale*100)/100 bisogna usare il metodo di moltiplicare per 10 con tanti zeri quanti decimali vogliamo avere, fare arrotondare e poi dividere nuovamente.
+
+// !isNaN(variabile) è una funzione che si assicura che la variabile all'interno non sia un NaN. Lo usiamo nella validazione insieme al controllo che i dati inseriti nel prompt non siano negativi. Se non soddisfa i criteri lanciamo un alert e poi reload(); per ricaricare la pagina.
+
+//backtick lo si scrive con option+\  ``
