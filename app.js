@@ -9,42 +9,39 @@ L’output del prezzo finale va stampato in console in forma “umana” cioè c
 
 
 // VARIABILI PROMPT
-// const richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere con i nostri treni."; //string
-// const richiestaAnni = "Inserisca la sua età."; //string
+const richiestaKm = "Buongiorno! Inserisca il numeri di chilometri da percorrere con i nostri treni."; //string
+const richiestaAnni = "Inserisca la sua età."; //string
 
-// //VARIABILI UTENTE DA PROMPT
-// const chilometriUtente = parseInt(prompt(richiestaKm)); //number
-// const anniUtente =  parseInt(prompt(richiestaAnni)); //number
+//VARIABILI UTENTE DA PROMPT
+const chilometriUtente = parseInt(prompt(richiestaKm)); //number
+const anniUtente =  parseInt(prompt(richiestaAnni)); //number
 
-// //PREZZI E SCONTISTICA
-// const costoKm = 0.21; //float
-// const scontoMinorenni = 20; //number
-// const scontoMaggiorenni = 0;  //number
-// const scontoOver65 = 40;  //number
-// let sconto;
-// let prezzoIntero = chilometriUtente * costoKm;
+//PREZZI E SCONTISTICA
+const costoKm = 0.21; //float
+const scontoMinorenni = 20; //number
+const scontoMaggiorenni = 0;  //number
+const scontoOver65 = 40;  //number
+let sconto;
+let prezzoIntero = chilometriUtente * costoKm;
 
-// //CALCOLO SCONTO
-// if(anniUtente < 18){
-//   sconto = (prezzoIntero / 100) * scontoMinorenni; //float
-// }else if(anniUtente >= 65){
-//   sconto = (prezzoIntero / 100) * scontoOver65; //float
-// }else{
-//   sconto = (prezzoIntero / 100) * scontoMaggiorenni; //float
-// }
+//CALCOLO SCONTO
+if(anniUtente < 18){
+  sconto = (prezzoIntero / 100) * scontoMinorenni; //float
+}else if(anniUtente >= 65){
+  sconto = (prezzoIntero / 100) * scontoOver65; //float
+}else{
+  sconto = (prezzoIntero / 100) * scontoMaggiorenni; //float
+}
 
-// //CALCOLO PREZZO FINALE
-// let prezzoFinale = prezzoIntero - sconto; //float
+//CALCOLO PREZZO FINALE
+let prezzoFinale = prezzoIntero - sconto; //float
 
-// // VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
-// let dichiarazionePrezzo = "Il prezzo del suo biglietto è di € " + prezzoFinale.toFixed(2) + ".";
-// console.log(dichiarazionePrezzo);
+// VARIABILE PROMPT PIÙ COUNICAZIONE PROMPT
+let dichiarazionePrezzo = "Il prezzo del suo biglietto è di € " + prezzoFinale.toFixed(2) + ".";
+console.log(dichiarazionePrezzo);
 
 // con math.round(prezzoFinale*100)/100 bisogna usare il metodo di moltiplicare per 10 con tanti zeri quanti decimali vogliamo avere, fare arrotondare e poi dividere nuovamente.
 
 // !isNaN(variabile) è una funzione che si assicura che la variabile all'interno non sia un NaN. Lo usiamo nella validazione insieme al controllo che i dati inseriti nel prompt non siano negativi. Se non soddisfa i criteri lanciamo un alert e poi reload(); per ricaricare la pagina.
 
 //backtick lo si scrive con option+\  ``
-
-let elementName = document.getElementById('name');
-console.log(elementName);
